@@ -46,7 +46,7 @@ def es_entero(cadena:str)->bool:
 def es_flotante(cadena:str)->bool:
     retorno = True
     puntos = 0
-    digitos = 0
+    numeros = 0
 
     if len(cadena) == 0: #Este if es para corroborar que la cadena no sea vacia tipo '.'
         retorno = False
@@ -69,7 +69,7 @@ def es_flotante(cadena:str)->bool:
             retorno = False
             break
 
-    if digitos == 0: # Este if es para corroborar que la cadena no sea '-.' o '-'
+    if numeros == 0: # Este if es para corroborar que la cadena no sea '-.' o '-'
         retorno = False
 
     return retorno
