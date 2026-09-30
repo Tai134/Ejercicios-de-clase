@@ -75,5 +75,18 @@ def producto_array(numero:int):
 
     return multiplicacion
 
-producto = producto_array(6)
-print(producto)
+# producto = producto_array(6)
+# print(producto)
+
+def obtener_maximo(lista:list)->int:
+    for i in range(len(lista)):
+        if i == 0:
+            indice_maximo = i
+            maximo = lista[i]
+        if lista[i] > maximo:
+            indice_maximo = i
+            maximo = lista[i]
+        
+    return indice_maximo
+
+print(obtener_maximo([3,5,7,4]))

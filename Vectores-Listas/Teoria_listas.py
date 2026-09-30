@@ -43,3 +43,8 @@ print(mi_lista)
 mi_lista = [10, 'hola', True, 3.5]
 for i in range(len(mi_lista)):
     print(mi_lista[i])
+
+## CARGAR CON APPEND ##
+
+## MANEJAR CON INDEX Y POP ##
+
