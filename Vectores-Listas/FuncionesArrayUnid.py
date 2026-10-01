@@ -89,4 +89,80 @@ def obtener_maximo(lista:list)->int:
         
     return indice_maximo
 
-print(obtener_maximo([3,5,7,4]))
+# print(obtener_maximo([3,5,7,4]))
+
+def obtenerymostrar_maximo(lista:list)->int:
+    lista_maximos = []  
+    for i in range(len(lista)):
+        if i == 0:
+            indice_maximo = i
+            maximo = lista[i]
+        elif lista[i] > maximo:
+            indice_maximo = [i]
+            maximo = lista[i]
+            lista_maximos = [i]
+        elif lista[i] == maximo:
+            lista_maximos += [i]
+    print(maximo)
+    return lista_maximos
+
+#print(obtenerymostrar_maximo([3,5,7,7,4]))
+
+lista_nombres = ['Taiel','Victoria','Bruno','Emi','Ema','Bruno','Lauti']
+nombre_antiguo = 'Bruno'
+nombre_nuevo = 'Agus'
+
+def reemplazar_nombres(nombre:list)->list:
+    cont_reemplazos = 0
+    for i in range(len(nombre)):
+        if nombre[i] == nombre_antiguo:
+            nombre[i] = nombre_nuevo
+            cont_reemplazos += 1
+
+    print(lista_nombres)
+    return cont_reemplazos
+
+# test = reemplazar_nombres(lista_nombres)
+# print(test)
+
+array_1 = ['a','b','c','d','e']
+array_2 = ['t','d','r','y','x']
+
+def interseccion_array (arr_1:list,arr_2:list)->list:
+    interseccion = []
+    for i in range(len(arr_1)):
+        for j in range(len(arr_2)):
+            if arr_1[i] == arr_2[j]:
+                interseccion += arr_2[j]
+
+    return interseccion
+
+# inter = interseccion_array(array_1,array_2)
+# print(inter)
+
+def union_array (arr_1:list,arr_2:list)->list:
+    union = []
+    for i in range(len(arr_1)):
+        repetidas = False
+        for j in range(len(union)):
+            if arr_1[i] == union[j]:
+                repetidas = True
+                break
+        
+        if repetidas == False:
+            union += arr_1[i]
+
+    for i in range(len(arr_2)):
+        repetido = False
+        for j in range(len(union)):
+            if arr_2[i] == union[j]:
+                repetido = True
+                break
+                
+        if repetido == False:
+            union += [arr_2[i]]
+    
+    return union
+
+uni = union_array(array_1,array_2)
+print(uni)
