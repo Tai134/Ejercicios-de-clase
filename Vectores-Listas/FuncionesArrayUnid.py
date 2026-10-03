@@ -125,8 +125,8 @@ def reemplazar_nombres(nombre:list)->list:
 # test = reemplazar_nombres(lista_nombres)
 # print(test)
 
-array_1 = ['a','b','c','d','e']
-array_2 = ['t','d','r','y','x']
+array_1 = ['a','b','r','c','d','e']
+array_2 = ['t','d','r','y','a','x']
 
 def interseccion_array (arr_1:list,arr_2:list)->list:
     interseccion = []
@@ -164,5 +164,25 @@ def union_array (arr_1:list,arr_2:list)->list:
     
     return union
 
-uni = union_array(array_1,array_2)
-print(uni)
+# uni = union_array(array_1,array_2)
+# print(uni)
+
+
+# Hacer punto 11 sobre esta funcion
+
+def diff_array (arr_1:list,arr_2:list)->list:
+    diff = []
+    for i in range(len(arr_1)):
+        repetidas = False
+        for j in range(len(arr_2)):
+            if arr_1[i] == arr_2[j]:
+                repetidas = True
+                break
+        
+        if repetidas == False:
+            diff += arr_1[i]
+     
+    return diff
+
+diferencias = diff_array(array_1, array_2)
+print(diferencias)
