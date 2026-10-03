@@ -125,8 +125,8 @@ def reemplazar_nombres(nombre:list)->list:
 # test = reemplazar_nombres(lista_nombres)
 # print(test)
 
-array_1 = ['a','b','r','c','d','e']
-array_2 = ['t','d','r','y','a','x']
+array_1 = ['a','b','c','d','e']
+array_2 = ['t','d','y','x','j']
 
 def interseccion_array (arr_1:list,arr_2:list)->list:
     interseccion = []
