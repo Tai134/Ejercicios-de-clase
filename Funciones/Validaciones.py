@@ -73,3 +73,83 @@ def es_flotante(cadena:str)->bool:
         retorno = False
 
     return retorno
+
+
+
+def carac_min(letra:str)->str:
+    caracter = ord(letra)
+    if caracter >= 65 and caracter <=90:
+        caracter = chr(caracter + 32)
+    return caracter
+
+def carac_mayu(letra:str)->str:
+    caracter = ord(letra)
+    if caracter >= 97 and caracter <= 122:
+        caracter = chr(caracter - 32)
+    return caracter
+
+def convertir_minus(letra:str)->str:
+    minus = ''
+    for caracter in letra:
+        if ord(caracter) >= 65 and ord(caracter) <=90:
+            modificado = carac_min(caracter)
+            minus += modificado
+        elif ord(caracter) >= 97 and ord(caracter) <=122:
+            no_modificado = caracter
+            minus += no_modificado
+        elif ord(caracter) == 32:
+            espacio = caracter
+            minus += espacio
+        else:
+            continue
+    return minus
+
+def convertir_mayus(letra:str)->str:
+    mayus = ''
+    for caracter in letra:
+        if ord(caracter) >= 97 and ord(caracter) <=122:
+            modificado = carac_mayu(caracter)
+            mayus += modificado
+        elif ord(caracter) >= 65 and ord(caracter) <=90:
+            no_modificado = caracter
+            mayus += no_modificado
+        elif ord(caracter) == 32:
+            espacio = caracter
+            mayus += espacio
+        else:
+            continue
+    return mayus
+
+def primer_mayus(letra:str)->str:
+    convertido = ''
+    indice = 0
+    for caracter in letra:
+        if indice == 0:
+            modificado1 = carac_mayu(caracter)
+            convertido += modificado1
+        else:
+            if ord(caracter) >= 65 and ord(caracter) <=90:
+                modificado = carac_min(caracter)
+                convertido += modificado
+            elif ord(caracter) >= 97 and ord(caracter) <=122:
+                no_modificado = caracter
+                convertido += no_modificado
+            elif ord(caracter) == 32:
+                espacio = caracter
+                convertido += espacio
+        
+        indice += 1
+
+    return convertido
+
+
+valor = carac_min('L')
+print(valor)
+valor1 = carac_mayu('l')
+print(valor1)
+valor2 = convertir_minus('HOLA MUNDO')
+print(valor2)
+valor3 = convertir_mayus('hola mundo')
+print(valor3)
+valor4 = primer_mayus('hOLa MuNDo')
+print(valor4)

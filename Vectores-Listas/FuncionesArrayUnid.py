@@ -184,5 +184,5 @@ def diff_array (arr_1:list,arr_2:list)->list:
      
     return diff
 
-diferencias = diff_array(array_1, array_2)
-print(diferencias)
+# diferencias = diff_array(array_1, array_2)
+# print(diferencias)
