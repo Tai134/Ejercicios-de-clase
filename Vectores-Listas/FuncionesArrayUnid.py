@@ -186,3 +186,13 @@ def diff_array (arr_1:list,arr_2:list)->list:
 
 # diferencias = diff_array(array_1, array_2)
 # print(diferencias)
+
+promedios = [8.75, 7.5, 9.00, 6.5, 8.50, 5.00]
+
+for i in range(len(promedios)):
+    if i == 0:
+        mayor = promedios[i]    
+    if promedios[i] > mayor:
+        mayor = promedios[i]
+        
+print(f"El mayor promedio es: {mayor}")

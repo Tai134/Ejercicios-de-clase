@@ -1,3 +1,5 @@
+#Clase 06/10
+
 cadena = 'Hola Mundo!'
 cadena_uno = 'Hola'
 cadena_dos = 'Mundo!'
@@ -71,6 +73,7 @@ for i in range(len(apellidos)):
     print(f"{legajo[i]} {nombre[i]} {apellidos[i]}")
 
 #--------------------------------------------------------------------------------------------#
+
 descripcion = ["Maza", "Pinza", "Tenaza"]
 precio_compra = [100, 200, 300]
 codigo = [1, 2, 3]
