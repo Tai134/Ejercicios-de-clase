@@ -98,3 +98,20 @@ def buscar_elemento_en_cantidad(matriz, objetivo):
 
     return encontrados
 
+#Escribe una función que reciba una matriz de números de notas de estudiantes que devuelva
+#la suma total de todos sus elementos y luego, calcular el promedio y mostrar en pantalla.
+
+def sumar_matriz(matriz:list)->float:
+    acumulador = 0
+    for i in range(len(matriz)):
+        for j in range(len(matriz[i])):
+            acumulador += matriz[i][j]
+    return acumulador
+
+def calcular_promedio_matriz(matriz:list)->float:
+    suma = sumar_matriz(matriz)
+    cantidad_elementos = len(matriz) * len(matriz[0])
+    promedio = suma / cantidad_elementos
+    return round(promedio,2)
+
+#Escribir un programa que busque la nota más alta y la posición en matriz e imprimir en pantalla.
